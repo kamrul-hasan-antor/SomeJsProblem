@@ -10,9 +10,6 @@ function kilometerToMeter(kilometer) {
   return meter;
 }
 
-var result = kilometerToMeter();
-console.log(result);
-
 // The "budgetCalculator" problem solving is given below.
 
 function budgetCalculator(watch, phone, laptop) {
@@ -22,8 +19,6 @@ function budgetCalculator(watch, phone, laptop) {
   var cost = watch * 50 + phone * 100 + laptop * 500;
   return cost;
 }
-var totalCost = budgetCalculator();
-console.log(totalCost);
 
 // The "hotelCost" problem solving is given below.
 
@@ -45,5 +40,19 @@ function hotelCost(days) {
   }
   return cost;
 }
-var totalCost = hotelCost();
-console.log(totalCost);
+
+// The "megaFriend" problem solving given below.
+
+function megaFriend(friend) {
+  var longest = friend[0];
+
+  for (var i = 0; i < friend.length; i++) {
+    var element = friend[i];
+    if (element.length > longest.length) {
+      longest = element;
+    } else if (friend == "") {
+      return "Error: Please insert a name.";
+    }
+  }
+  return longest;
+}
