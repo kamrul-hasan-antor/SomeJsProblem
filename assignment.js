@@ -24,7 +24,9 @@ function budgetCalculator(watch, phone, laptop) {
 
 function hotelCost(days) {
   var cost = 0;
-  if (days <= 10) {
+  if (days < 0) {
+    return "Error: Please insert a positive value. ";
+  } else if (days <= 10) {
     cost = days * 100;
   } else if (days <= 20) {
     var firstTenDays = 10 * 100;
